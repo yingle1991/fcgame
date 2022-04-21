@@ -36,17 +36,16 @@ if (typeof jQuery !== 'undefined') {
                  * Create UI
                  */
                 self.status = $('<p class="nes-status">Booting up...</p>').appendTo(self.root);
-                self.root = $('<div class="nes-root"></div>');
+                self.root = $('<div></div>');
                 self.screen = $('<canvas class="nes-screen" width="256" height="240"></canvas>').appendTo(self.root);
 
                 if (!self.screen[0].getContext) {
                     parent.html("Your browser doesn't support the <code>&lt;canvas&gt;</code> tag. Try Google Chrome, Safari, Opera or Firefox!");
                     return;
                 }
-                self.romContainer = $('<div class="nes-operation"></div>').appendTo(self.root);
-                self.roms=$('<div class="nes-roms"></div>').appendTo(self.romContainer);
-                self.romSelect = $('<select></select>').appendTo(self.roms);
-                self.controls = $('<div class="nes-controls"></div>').appendTo(self.romContainer);
+                self.romContainer = $('<div class="nes-roms"></div>').appendTo(self.root);
+                self.romSelect = $('<select></select>').appendTo(self.romContainer);
+                self.controls = $('<div class="nes-controls"></div>').appendTo(self.root);
                 self.buttons = {
                     pause: $('<input type="button" value="暂停" class="nes-pause" disabled="disabled">').appendTo(self.controls),
                     restart: $('<input type="button" value="重启" class="nes-restart" disabled="disabled">').appendTo(self.controls),

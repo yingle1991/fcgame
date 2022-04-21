@@ -30,12 +30,26 @@
                         <button role="BUTTON_LEFT" class="left joydirection" id="joystick_btn_left">left</button>
                     </div>
                 </div>
-                <div class="joy">I</div>
+                <!-- <div class="joy">I</div>
                <div><a href="https://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0NDYwMDk1Nw==&scene=123#wechat_redirect" tppabs="http://liflag.cn/post/59" target="_blank" class="readme">按键说明</a></div>
-            </div>
+             --></div>
             <div class="function-area">
                 <div class="screen">
                     <div id="emulator" align="center" style="width:100%;height:100%"></div>
+                    <!-- <div class="icons">
+                         <i class="iconfont icon-zanting"></i>
+                        <i class="iconfont icon-fangda fullScreen"></i>
+                        <i class="iconfont icon-chongqi restart"></i>
+                        <i class="iconfont icon-jingyin sound"></i>
+                      </div> --> 
+  
+                      <div class="tip" style="display: none;">
+                        <p>正在载入...</p>
+                      </div>
+                      <div class="qr-code" style="display: none;">
+                        <img src="https://cdn.jsdelivr.net/gh/xugaoyi/image_store@master/blog/qrcode.zdqv9mlfc0g.jpg" alt="">
+                        <p>「有趣研究社」这里有更多有趣的、好玩的、沙雕的小玩意儿等着你去探索~</p>
+                      </div>
                 </div>
                 <div class="function">
                     <button class="controls-center-select joybtn" id="joystick_btn_select" role="BUTTON_SELECT">Select</button>
@@ -65,12 +79,12 @@
 <script src="ppu.js" tppabs="http://fc.liflag.cn/source/ppu.js" type="text/javascript" charset="utf-8"></script>
 <script src="rom.js" tppabs="http://fc.liflag.cn/source/rom.js" type="text/javascript" charset="utf-8"></script>
 <script src="ui.js" tppabs="http://fc.liflag.cn/source/ui.js" type="text/javascript" charset="utf-8"></script>
-<script src="debug.js" tppabs="http://fc.liflag.cn/lib/debug.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="debug.js" tppabs="http://fc.liflag.cn/lib/debug.js" type="text/javascript" charset="utf-8"></script> -->
 <script type="text/javascript" charset="utf-8">
     var nes;
     $(function() {
         nes = new JSNES({
-            'ui': $('#emulator').JSNESUI({
+            'ui': $('#emulator')['JSNESUI']({
                 "经典": [
                     ['纽约大拳猫', 'RockinCats.nes'/*tpa=http://fc.liflag.cn/roms/rom2/RockinCats.nes*/],
                     ['赤影战士 Kage', 'Kage.nes'/*tpa=http://fc.liflag.cn/roms/other/Kage.nes*/],
